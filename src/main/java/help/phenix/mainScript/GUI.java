@@ -11,7 +11,7 @@ public class GUI extends JFrame {
     private JTextField textFieldTile = new JTextField("Сюда нужно ввести заголовок", 25);
     private JTextField textFieldDescription = new JTextField("Сюда нужно ввести описание (рекламное сообщение), которое будет отправляться", 25);
     private JLabel labelAmountThread = new JLabel("Заполни поля ниже, (в первое поле введи цифру) затем нажми кнопку только 1 раз, и больше не нажимай на нее, а то будет взрыв.");
-    private JLabel labelAmountThread1 = new JLabel("Браузеры которые откроются лучше не трогать), если будут вопросы то спрашивай");
+    private JLabel labelAmountThread1 = new JLabel("Браузеры которые откроются лучше не трогать), если будут вопросы, то спрашивай");
     private JLabel labelAmountThread2 = new JLabel("Завершить прогу можно нажав крестик в этом окне, но лучше этого не делать раньше времени");
 
     public GUI() {

@@ -32,8 +32,12 @@ public class MyScriptThread extends Thread {
     }
 
     public void run() {
-        for (String subject : listOfSubjects) {
-            for (String orderType : listOfOrderTypes) {
+        try {
+            Thread.sleep(1000 * number);
+        } catch (InterruptedException e) {
+        }
+        for (String orderType : listOfOrderTypes) {
+            for (String subject : listOfSubjects) {
                 try {
                     orderPage
                             .openPage()
