@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import ru.stqa.selenium.factory.WebDriverPool;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,11 +19,12 @@ public class myChromeDriver implements SetupDriver {
     }
 
     public WebDriver getDriver(){
-        WebDriver driver = WebDriverPool.DEFAULT.getDriver(getCapabilities()); //webDriver.getCapabilities()
-        //driver.manage().window().setPosition(new Point(0, -1000));
-        driver.manage().timeouts().implicitlyWait(getPropertiesForDriver.getImplicitlyWaitTime(), TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        return driver;
+//        WebDriver driver = WebDriverPool.DEFAULT.getDriver(getCapabilities()); //webDriver.getCapabilities()
+//        //driver.manage().window().setPosition(new Point(0, -1000));
+//        driver.manage().timeouts().implicitlyWait(getPropertiesForDriver.getImplicitlyWaitTime(), TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//        return driver;
+        return null;
     }
 
     private WebDriver setConfigChromeDriver() {
@@ -46,8 +46,8 @@ public class myChromeDriver implements SetupDriver {
     }
 
     public void tearDownWebDriver(WebDriver driver) {
-        WebDriverPool.DEFAULT.dismissDriver(driver);
-//        driver.close();
-//        driver.quit();
+ //       WebDriverPool.DEFAULT.dismissDriver(driver);
+       driver.close();
+        driver.quit();
     }
 }
